@@ -63,4 +63,9 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
   });
 
-
+// Volume Slider
+document.querySelector("#slider").addEventListener("input", function() {
+	video.volume = this.value / 100;
+	console.log("The current value is", video.volume);
+	document.querySelector("#volume").textContent = this.value + "%";
+});
