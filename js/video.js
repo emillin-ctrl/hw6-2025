@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();  // Play the video
-	document.querySelector("#volume").textContent = video.volume; // Update current volume
+	document.querySelector("#volume").textContent = video.volume*100+"%"; // Update current volume
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -25,7 +25,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow down video");
 	video.playbackRate *= 0.9;
-	console.log("Speed is", video.playbackRate.toFixed(3));
+	console.log("Speed is", video.playbackRate);
 });
 
 
